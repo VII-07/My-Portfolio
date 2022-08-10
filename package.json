@@ -1,8 +1,10 @@
 {
   "name": "name-project",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack serve --env develop"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "live": "webpack-cli serve --mode development --open"
   },
   "devDependencies": {
     "css-loader": "^6.5.1",
