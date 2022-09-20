@@ -5,7 +5,396 @@
 @import 'fonts';
 @import 'colors';
 
+// .container-my {
+//     @extend .container;
+//     max-width: 1900px;
+// }
+
+.header {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/emile-perron-xrVDYZRGdw4-unsplash-scaled.png');
+    background-size: cover;
+
+    &__title {
+        color: white;
+        font-size: 90px;
+        font-weight: 800;
+        line-height: 100%;
+
+        &-prime {
+            color: white;
+            font-size: 70px;
+            font-weight: 400;
+            line-height: 100%;
+        }
+    }
+
+    &__description {
+        color: white;
+        font-size: 40px;
+        font-weight: 200;
+        line-height: 100%;
+        margin-bottom: 10%;
+    }
+
+    &__btn {
+        width: 100%;
+        color: white;
+        padding: 5px 15px 5px 15px;
+        border: 1px solid white;
+        border-radius: 50px;
+        background: none;
+        font-size: 25px;
+
+        &-link {
+            color: white;
+            text-decoration: none;
+        }
+
+        &-link:hover {
+            color: white;
+        }
+    }
+
+    &__btn:hover {
+        background-color: $blue;
+        border: 1px solid $blue;
+        border-radius: 50px;
+    }
+}
+
+.nav {
+    &-link {
+        color: white;
+        @include adaptivFont(15, 15);
+        margin-right: 10px;
+    }
+
+    &-link:hover {
+        color: $blue;
+    }
+
+    &bar-brand {
+        font-family: 'Permanent Marker', cursive;
+        @include adaptivFont(25, 20);
+        color: white;
+    }
+
+    &bar-brand:hover {
+        color: white;
+    }
+
+    &bar-brand:active {
+        color: white;
+        ;
+    }
+}
+
+.navbar {
+    background-color: rgb(0, 0, 0, 0.7);
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: $blue;
+    border: 1px solid $blue;
+    border-radius: 50px;
+}
+
+.navbar-nav .nav-link.active:hover {
+    color: black;
+}
+
+.phone {
+    &__icon {
+        max-width: 28px;
+        margin-right: 5px;
+    }
+
+    &__number {
+        color: white;
+        text-decoration: none;
+    }
+
+    &__number:hover {
+        color: $blue;
+    }
+}
+
+.social {
+    &__network {
+        position: absolute;
+        bottom: 10px;
+        left: 15px;
+        &-link{
+            padding: 8px;
+            border-radius: 10px;
+        }
+        &-link:hover{
+            position: relative;
+            background-color: $blue;
+            transition: .6s;
+        }
+
+        &-icon {
+            width: 35px;
+        }
+    }
+    &__network-2{
+        width: 20%;
+    }
+}
+
+.about {
+    background: black;
+    height: 100vh;
+    padding-top: 5%;
+
+    &__title {
+        color: white;
+        font-size: 60px;
+        font-weight: 700;
+        margin-bottom: 10%;
+        line-height: 100%;
+
+        &-prime {
+            color: $blue;
+            font-size: 35px;
+            font-weight: 400;
+            line-height: 100%;
+        }
+    }
+
+    &__description {
+        font-size: 25px;
+        color: white;
+        opacity: 0.8;
+    }
+
+    &__img {
+        height: 80vh;
+
+        &-1 {
+            position: absolute;
+        }
+
+        &-2 {
+            z-index: 1;
+        }
+    }
+
+}
+
+.contacts {
+    background-color: $grey;
+    height: 100vh;
+
+    &__container {
+        span {
+            margin-right: 5px;
+            margin-left: 5px;
+            color: white;
+            font-size: 35px;
+        }
+    }
+
+    &__type {
+        color: white;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    &__content {
+        color: $blue;
+        font-size: 30px;
+        font-weight: 300;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    &__btn {
+        background-color: $blue;
+    }
+}
+.alert{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    text-align: center;
+    transform: translateY(-200%);
+    transition: 0.6s;
+
+    background-color: $blue;
+    opacity: 0.7;
+}
+.alert.active {
+    transform: translateY(0);
+}
+
+.form {
+    &-label {
+        color: white;
+        background-color: $blue;
+        border-radius: 10px;
+        padding: 5px 10px 5px 10px;
+    }
+    &-control{
+        background-color: rgb(57, 57, 57);
+        margin-bottom: 7%;
+    }
+}
+
+.portfolio {
+    padding-top: 5%;
+    background-color: black;
+    height: 100vh;
+}
 
 
+
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.base {
+    width: 500px;
+    border-top: 5px solid gray;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    padding: 0 0 30px;
+}
+
+.holder {
+    width: 30px;
+    height: 20px;
+    background: gray;
+    margin: auto;
+    border-radius: 0 0 50% 50%;
+}
+
+.thread {
+    display: inline-block;
+    width: 4px;
+    height: 70vh;
+    background: gray;
+    border-radius: 5px;
+    position: relative;
+    transform-origin: 50% 0;
+    animation: moveIt 2.5s ease-in-out infinite;
+}
+
+.thread:after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: blue;
+    border: 2px solid white;
+    top: -4.5px;
+    left: -1.1px;
+}
+
+.knob {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -18px;
+    left: -4.5px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 50%;
+    border-bottom: 2px solid transparent;
+}
+
+.pendulum {
+    width: 70px;
+    height: 80px;
+    // background: -moz-radial-gradient(circle at 70% 35%, white, #66d63e 30%, #40a31d 50%);
+    // background: -webkit-radial-gradient(circle at 70% 35%, white, #66d63e 30%, #40a31d 50%);
+    // background: -o-radial-gradient(circle at 70% 35%, white, #66d63e 30%, #40a31d 50%);
+    // background: -ms-radial-gradient(circle at 70% 35%, white, #66d63e 30%, #40a31d 50%);
+    // background: radial-gradient(circle at 70% 35%, white, #66d63e 30%, #40a31d 50%);
+    // border-radius: 50%;
+    background: url('../images/on.png');
+    position: absolute;
+    bottom: -36px;
+    left: -34px;
+    background-size: cover;
+    transform: rotate(182deg);
+}
+
+.shadow {
+    width: 200px;
+    height: 30px;
+    background: rgba(255, 230, 2, 0.204);
+    border-radius: 50%;
+    margin: 50px auto 0;
+    animation: moveShade 1.25s ease-in-out alternate infinite;
+}
+
+@keyframes moveIt {
+
+    0%,
+    100% {
+        transform: rotate(45deg);
+    }
+
+    50% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes moveShade {
+    0% {
+        transform: translateX(-404px) scale(1.4, 0.5);
+        filter: blur(20px);
+    }
+
+    50% {
+        filter: blur(3px);
+    }
+
+    100% {
+        transform: translateX(395px) scale(1.4, 0.5);
+        filter: blur(20px);
+    }
+}
+
+.lamp {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.loader {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.none {
+    display: none;
+}
 
 @import 'media';
