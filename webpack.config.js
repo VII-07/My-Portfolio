@@ -33,7 +33,12 @@ module.exports = ({
     target: 'web',
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            filename: 'index.html',
+            template: 'src/index.html',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'portfolio.html',
+            template: 'src/portfolio.html',
         }),
         new MiniCssExtractPlugin({
             filename: './styles/main.css'
@@ -60,7 +65,8 @@ module.exports = ({
                     MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
                 ]
             }
-        ]
+        ],
+        
     },
     ...devServer(develop),
 });
