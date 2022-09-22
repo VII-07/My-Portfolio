@@ -71,6 +71,7 @@
         color: white;
         @include adaptivFont(15, 15);
         margin-right: 10px;
+        border-radius: 50px;
     }
 
     &-link:hover {
@@ -96,6 +97,8 @@
 .navbar {
     background-color: rgb(0, 0, 0, 0.7);
     padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -104,7 +107,6 @@
 .navbar-nav .nav-link.active {
     background-color: $blue;
     border: 1px solid $blue;
-    border-radius: 50px;
 }
 
 .navbar-nav .nav-link.active:hover {
@@ -241,7 +243,7 @@
     text-align: center;
     transform: translateY(-200%);
     transition: 0.6s;
-
+    z-index: 5;
     background-color: $blue;
     opacity: 0.7;
 }
@@ -296,6 +298,7 @@
             height: 60px;
             border-radius: 50px;
             background-color: $blue;
+            opacity: 100%;
         }
         &-prev{
             left: 0;
@@ -303,6 +306,7 @@
             height: 60px;
             border-radius: 50px;
             background-color: $blue;
+            opacity: 100%;
         }
     }
 }
@@ -311,7 +315,7 @@
 }
 
 .card {
-    padding: 15px 20px 5px 10px;
+    padding: 15px 20px 5px 20px;
     border: 1px solid $grey;
     border-radius: 10px;
     background-color: $grey;
