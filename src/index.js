@@ -4,3 +4,4 @@ import './styles/main.scss';
 import 'bootstrap';
 import './functionCopy'
 import './activeMenu';
+import './form';

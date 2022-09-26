@@ -113,21 +113,21 @@
           </div>
         </div>
         <div class="col-5">
-          <form class="contacts__form">
+          <form class="contacts__form" id="form" action="#">
             <div class="mb-3">
               <!-- <label class="form-label" for="name">Your name</label> -->
-              <input class="form-control" id="name" type="text" placeholder="Your name" />
+              <input class="form-control _req" id="formName" type="text" placeholder="Your name" />
             </div>
             <div class="mb-3">
               <!-- <label class="form-label" for="emailAddress">Your Email Address</label> -->
-              <input class="form-control" id="emailAddress" type="email" placeholder="Your Email Address" />
+              <input class="form-control _req _email" name="email" id="formEmail" type="email" placeholder="Your Email Address" />
             </div>
             <div class="mb-3">
               <!-- <label class="form-label" for="message">Message</label> -->
-              <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;"></textarea>
+              <textarea class="form-control _req" id="message"name="message" type="text" placeholder="Message" style="height: 10rem;"></textarea>
             </div>
             <div class="d-grid">
-              <button class="contacts__btn btn btn-primary btn-lg" type="send">Send</button>
+              <button class="contacts__btn btn btn-primary btn-lg" type="submit">Send</button>
             </div>
         
           </form>
@@ -136,18 +136,8 @@
     </div>
   </section>
   
-  <section class="none loader">
-    <div class="lamp">
-      <div class="base">
-        <div class="holder"></div>
-        <div class="thread">
-          <div class="knob"></div>
-          <div class="pendulum"></div>
-        </div>
-        <div class="shadow"></div>
-      </div>
-    </div>
-  </section>
+  <section class=" ">
+
 </body>
 
 </html>

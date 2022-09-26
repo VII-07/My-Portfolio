@@ -230,6 +230,25 @@
         background-color: $blue;
     }
 }
+.contacts__form{
+    position: relative;
+}
+.contacts__form::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/Rolling-1.3s-517px.gif") center / 150px no-repeat;
+    opacity: 0;
+    visibility: hidden;
+}
+.contacts__form._sending::after {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease 0s;
+}
 
 .alert {
     color: white;
@@ -336,136 +355,8 @@
 
 }
 
-
-
-
-
-
-
-
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.base {
-    width: 500px;
-    border-top: 5px solid gray;
-    margin: auto;
-    text-align: center;
-    position: relative;
-    padding: 0 0 30px;
-}
-
-.holder {
-    width: 30px;
-    height: 20px;
-    background: gray;
-    margin: auto;
-    border-radius: 0 0 50% 50%;
-}
-
-.thread {
-    display: inline-block;
-    width: 4px;
-    height: 70vh;
-    background: gray;
-    border-radius: 5px;
-    position: relative;
-    transform-origin: 50% 0;
-    animation: moveIt 2.5s ease-in-out infinite;
-}
-
-.thread:after {
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: blue;
-    border: 2px solid white;
-    top: -4.5px;
-    left: -1.1px;
-}
-
-.knob {
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    top: -18px;
-    left: -4.5px;
-    border: 2px solid rgba(255, 255, 255, .5);
-    border-radius: 50%;
-    border-bottom: 2px solid transparent;
-}
-
-.pendulum {
-    width: 70px;
-    height: 80px;
-    // background: -moz-radial-gradient(circle at 70% 35%, white, #66d63e 30%, #40a31d 50%);
-    // background: -webkit-radial-gradient(circle at 70% 35%, white, #66d63e 30%, #40a31d 50%);
-    // background: -o-radial-gradient(circle at 70% 35%, white, #66d63e 30%, #40a31d 50%);
-    // background: -ms-radial-gradient(circle at 70% 35%, white, #66d63e 30%, #40a31d 50%);
-    // background: radial-gradient(circle at 70% 35%, white, #66d63e 30%, #40a31d 50%);
-    // border-radius: 50%;
-    background: url('../images/on.png');
-    position: absolute;
-    bottom: -36px;
-    left: -34px;
-    background-size: cover;
-    transform: rotate(182deg);
-}
-
-.shadow {
-    width: 200px;
-    height: 30px;
-    background: rgba(255, 230, 2, 0.204);
-    border-radius: 50%;
-    margin: 50px auto 0;
-    animation: moveShade 1.25s ease-in-out alternate infinite;
-}
-
-@keyframes moveIt {
-
-    0%,
-    100% {
-        transform: rotate(45deg);
-    }
-
-    50% {
-        transform: rotate(-45deg);
-    }
-}
-
-@keyframes moveShade {
-    0% {
-        transform: translateX(-404px) scale(1.4, 0.5);
-        filter: blur(20px);
-    }
-
-    50% {
-        filter: blur(3px);
-    }
-
-    100% {
-        transform: translateX(395px) scale(1.4, 0.5);
-        filter: blur(20px);
-    }
-}
-
-.lamp {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0%);
-}
-
-.loader {
-    width: 100%;
-    height: 100vh;
-    background-color: black;
+.form-control._error {
+    box-shadow: 0 0 15px red;
 }
 
 .none {
