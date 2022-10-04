@@ -5,6 +5,7 @@ window.onscroll = () => {
     let current = "home";
     section.forEach((sections) => {
         const sectionTop = sections.offsetTop;
+        // console.log(sectionTop);
         if(pageYOffset >= sectionTop-60) {
             current = sections.getAttribute('id');
         }

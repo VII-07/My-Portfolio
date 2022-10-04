@@ -3,5 +3,7 @@ import './styles/main.scss';
 // Import all of Bootstrap's JS
 import 'bootstrap';
 import './functionCopy'
-import './activeMenu';
-import './form';
+import './activeMenu';  
+import './animation';
+import './scroll';
+
