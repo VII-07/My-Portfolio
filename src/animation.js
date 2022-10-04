@@ -6,8 +6,9 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.defaults({
-    toggleActions: "restart pause resume pause",
-    scroller: ".wrapper"
+    toggleActions: "restart restart restart pause",
+    scroller: ".wrapper",
+    duration: 3
   });
 
 
@@ -67,39 +68,24 @@ tl.to('.social__network-link-3', {
     repeatDelay: 0.5
 });
 
-gsap.to('.header__title-prime', {
+gsap.from('.header__title-prime', {
     x: '-200%',
     duration: 2,
-    scrollTrigger: {
-        trigger: '.header',
-        start: 'bottom bottom',
-        end: 'bottom center',
-        scrub: true,
-        ease: "power4.out",
-    }
+    ease: "power4.out",
+    scrollTrigger:'.header'
 })
-gsap.to('.header__title', {
+gsap.from('.header__title', {
     x: '500%',
     duration: 2,
     ease: "power4.out",
-    scrollTrigger: {
-        trigger: '.header',
-        start: 'bottom bottom',
-        end: 'bottom center',
-        scrub: true,
-    }
+    scrollTrigger:'.header'
     
 })
-gsap.to('.header__description', {
+gsap.from('.header__description', {
     y:'200%',
     opacity:0,
     duration:2,
-    scrollTrigger: {
-        trigger: '.header',
-        start: 'bottom bottom',
-        end: 'bottom center',
-        scrub: true,
-    },
+    scrollTrigger: '.header',
     ease: "power4.out"
 })
 let app = document.querySelector('.about__title');
@@ -121,25 +107,12 @@ gsap.from('.about__img-1, .about__img-2', {
     duration: 3,
     scrollTrigger:'.about',
     ease: "power4.out",
-    scrollTrigger: {
-        trigger: '.about',
-        start: 'top center',
-        end: 'center center',
-        scrub: true,
-        duration:3
-    }
 });
 gsap.from('.about__title-prime', {
     x: '-200%',
     duration: 2,
     scrollTrigger:'.about',
     ease: "power4.out",
-    scrollTrigger: {
-        trigger: '.about',
-        start: 'top center',
-        end: 'center center',
-        scrub: true,
-    }
 });
 gsap.from('.about__title',{
     x:'50%',
@@ -147,25 +120,13 @@ gsap.from('.about__title',{
     duration:2,
     scrollTrigger:'.about',
     ease: "power4.out",
-    scrollTrigger: {
-        trigger: '.about',
-        start: 'top center',
-        end: 'center center',
-        scrub: true,
-    }
 })
 gsap.from('.about__description', {
-    y: '300%',
+    y: '200%',
     opacity: 0,
-    duration: 2,
+    duration: 3,
     scrollTrigger:'.about',
     ease: "power4.out",
-    scrollTrigger: {
-        trigger: '.about',
-        start: 'top center',
-        end: 'center center',
-        scrub: true
-    }
 });
 gsap.from('.about__img-1', {
     rotation: 360,
@@ -179,6 +140,34 @@ gsap.from('.about__img-1', {
     repeat: -1,
     ease: 'none',
     yoyo: true,
+});
+//contacts
+gsap.from('.contacts__type', {
+    y: '300%',
+    opacity: 0,
+    duration: 2.5,
+    scrollTrigger:'.contacts',
+    ease: "power4.out",
+});
+gsap.from('.contacts__content', {
+    y: '-300%',
+    opacity: 0,
+    duration: 2.5,
+    scrollTrigger:'.contacts',
+    ease: "power4.out",
+});
+gsap.from('.contacts__title', {
+    x: '200%',
+    opacity: 0,
+    duration: 2,
+    scrollTrigger:'.contacts',
+    ease: "power4.out",
+});
+gsap.from('.contacts__title-prime', {
+    x: '-200%',
+    duration: 2,
+    scrollTrigger:'.contacts',
+    ease: "power4.out",
 });
 
 
