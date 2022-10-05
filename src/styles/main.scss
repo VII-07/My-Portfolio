@@ -5,20 +5,23 @@
 @import 'fonts';
 @import 'colors';
 
-html, body {
-    margin: 0;
-    padding: 0;
+body {
     overflow: hidden;
   }
+.container {
+    padding: 5%;
+    opacity: 1;
+    transition: opacity .8s ease;
+}
+.active .container {
+  opacity: 1;
+}
   
 .wrapper{
-    max-height: 100vh;
-    overflow-y: scroll;
     overflow-x: hidden;
-    scroll-snap-type: y mandatory;
 }
+
 .sections{
-    scroll-snap-align: start;
     height: 100vh;
 }
 
