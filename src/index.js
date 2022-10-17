@@ -5,5 +5,4 @@ import 'bootstrap';
 import './functionCopy'
 import './activeMenu';  
 import './animation';
-import './scroll';
 
