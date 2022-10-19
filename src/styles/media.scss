@@ -4,30 +4,57 @@
         height: 80%;
         bottom: 0;
     }
-    .about{
+
+    .about {
         height: 100vh;
         padding-top: 20%;
     }
-    .header{
+
+    .header {
         padding-top: 20%;
     }
-    .contacts{
+
+    .contacts {
         padding-top: 20%;
     }
+
     .navbar {
-        background: none;
+        background-color: rgb(0, 0, 0, 0.4);
         padding-top: 20px;
     }
-    .contacts__content{
+
+    .nav-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contacts__content {
         color: white;
         text-decoration: underline;
     }
-    section, header{
+
+    section,
+    header {
         padding-top: 20%;
     }
+
+    .portfolio {
+        height: 100%;
+        padding-top: 25%;
+    }
+
+    .contacts__img-item {
+        width: 70%;
+    }
 }
+
 @media (max-width: 500px) {
     .about__img {
         bottom: 0;
     }
+
+    .social__network {
+        bottom: 115px;
+    }
+
 }

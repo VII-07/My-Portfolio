@@ -134,7 +134,7 @@ gsap.from('.about__title', {
     duration: 2,
     scrollTrigger: '.about',
     ease: "power4.out",
-    delay: 1.5
+    delay: 1
 })
 gsap.from('.about__description', {
     y: '100%',

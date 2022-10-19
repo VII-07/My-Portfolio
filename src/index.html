@@ -5,17 +5,34 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <title>Bogdan Bayurchak</title>
 </head>
 
 <body>
+  <!-- preloader -->
+  <div class="preloader">
+    <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="pl-grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="hsl(193,90%,55%)" />
+          <stop offset="100%" stop-color="hsl(223,90%,55%)" />
+        </linearGradient>
+      </defs>
+      <circle class="pl__ring" r="56" cx="64" cy="64" fill="none" stroke="hsla(0,10%,10%,0.1)" stroke-width="16" stroke-linecap="round" />
+      <path class="pl__worm" d="M92,15.492S78.194,4.967,66.743,16.887c-17.231,17.938-28.26,96.974-28.26,96.974L119.85,59.892l-99-31.588,57.528,89.832L97.8,19.349,13.636,88.51l89.012,16.015S81.908,38.332,66.1,22.337C50.114,6.156,36,15.492,36,15.492a56,56,0,1,0,56,0Z" fill="none" stroke="url(#pl-grad)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="44 1111" stroke-dashoffset="10" />
+    </svg>
+  </div>
+  
 <div id="fullpage" class='wrapper'>
   <nav class="navbar navbar-expand-lg  navbar-dark">
     <div class="container-fluid ">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
       aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="toggler-icon top-bar"></span>
+      <span class="toggler-icon middle-bar"></span>
+      <span class="toggler-icon bottom-bar"></span>
   </button>
       <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
@@ -32,7 +49,7 @@
             <a class="nav-link" href="#contacts">Contacts</a>
           </li>
         </ul>
-        <a href="tel:+380662886185" class="phone__number d-flex justify-content-between align-items-center"><img
+        <a href="tel:+380662886185" class="phone__number d-flex justify-content-lg-between justify-content-center align-items-center"><img
             class="phone__icon" src="images/icons8-iphone-x-64.png" alt=""> +38 (066) 288-61-85</a>
       </div>
     </div>
@@ -191,7 +208,7 @@
   <section id="contacts" class="sections contacts d-flex flex-column justify-content-center">
     <div class="container">
       <div class="row">
-        <div class="col-lg-7 d-flex flex-column justify-content-center">
+        <div class="col-md-7 d-flex flex-column justify-content-center">
           <h3 class="contacts__title-prime text-uppercase">My contacts</h3>
           <h2 class="contacts__title">Contact me</h2>
           <div class="row">
@@ -226,8 +243,8 @@
             </div>
           </div>
         </div>
-         <div class="col-lg-5">
-          <div class="contacts__img">
+         <div class="col-md-5">
+          <div class="contacts__img d-flex justify-content-center">
             <img src="images/Contact-us-hero-image.png" alt="img" class="contacts__img-item">
           </div>
           <!-- <form class="contacts__form" id="form" action="#">
