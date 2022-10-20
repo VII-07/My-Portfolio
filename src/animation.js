@@ -6,7 +6,7 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.defaults({
-    toggleActions: "restart restart restart pause",
+    toggleActions: "restart pause restart pause",
 });
 
 
@@ -66,17 +66,16 @@ tl.to('.social__network-link-3', {
 
 gsap.from('.header__title-prime', {
     x: '-200%',
-    duration: 2,
+    duration: 2.5,
     ease: "power4.out",
     yoyo: true,
     scrollTrigger: '.header',
-    delay: 1
+    delay: 0.7
 })
 tl.to('.header__btn', {
     y: '-50%',
     duration: 1.5,
     yoyo: true,
-    delay: 1.5,
     repeat: -1
 })
 
@@ -85,16 +84,16 @@ gsap.from('.header__title', {
     duration: 2,
     ease: "power4.out",
     scrollTrigger: '.header',
-    delay: 1
+    delay: 0.7
 
 })
 gsap.from('.header__description', {
     y: '200%',
     opacity: 0,
-    duration: 2,
+    duration: 2.5,
     scrollTrigger: '.header',
     ease: "power4.out",
-    delay: 1
+    delay: 0.7
 })
 
 // about
@@ -119,14 +118,13 @@ gsap.from('.about__img-1, .about__img-2', {
     duration: 3,
     scrollTrigger: '.about',
     ease: "power4.out",
-    delay: 1
 });
 gsap.from('.about__title-prime', {
     x: '-200%',
     duration: 2,
     scrollTrigger: '.about',
     ease: "power4.out",
-    delay: 1
+    delay: 0.7
 });
 gsap.from('.about__title', {
     x: '50%',
@@ -134,7 +132,7 @@ gsap.from('.about__title', {
     duration: 2,
     scrollTrigger: '.about',
     ease: "power4.out",
-    delay: 1
+    delay: 0.7
 })
 gsap.from('.about__description', {
     y: '100%',
@@ -142,14 +140,13 @@ gsap.from('.about__description', {
     duration: 3,
     scrollTrigger: '.about',
     ease: "power4.out",
-    delay: 1
+    delay: 0.7
 });
 gsap.from('.about__img-1', {
     rotation: 360,
     duration: 12,
     ease: 'none',
     repeat: -1,
-    delay: 1
 });
 gsap.from('.about__img-1', {
     duration: 5,
@@ -157,7 +154,6 @@ gsap.from('.about__img-1', {
     repeat: -1,
     ease: 'none',
     yoyo: true,
-    delay: 1
 });
 
 //portfolio
@@ -165,10 +161,10 @@ gsap.from('.about__img-1', {
 gsap.from('.portfolio__title-prime', {
     x: '-200%',
     opacity: 0,
-    duration: 2,
+    duration: 2.5,
     scrollTrigger: '.portfolio',
     ease: "power4.out",
-    delay: 1.5
+    delay: 0.7
 });
 gsap.from('.carousel', {
     x: '-30px',
@@ -176,7 +172,7 @@ gsap.from('.carousel', {
     duration: 6,
     scrollTrigger: '.portfolio',
     ease: "power4.out",
-    delay: 1
+    delay: 0.7
 });
 
 //contacts
@@ -186,7 +182,7 @@ gsap.from('.contacts__type', {
     duration: 2.5,
     scrollTrigger: '.contacts',
     ease: "power4.out",
-    delay: 1
+    delay: 0.7
 });
 gsap.from('.contacts__content, .social__network-2', {
     y: '100%',
@@ -194,7 +190,7 @@ gsap.from('.contacts__content, .social__network-2', {
     duration: 2.5,
     scrollTrigger: '.contacts',
     ease: "power4.out",
-    delay: 1
+    delay: 0.7
 });
 
 gsap.from('.contacts span', {
@@ -202,7 +198,7 @@ gsap.from('.contacts span', {
     duration: 2.5,
     scrollTrigger: '.contacts',
     ease: "power4.out",
-    delay: 2.5
+    delay:2.5
 });
 
 gsap.from('.contacts__title', {
@@ -212,14 +208,14 @@ gsap.from('.contacts__title', {
     duration: 2,
     scrollTrigger: '.contacts',
     ease: "power4.out",
-    delay: 1
+    delay: 0.7
 });
 gsap.from('.contacts__title-prime', {
     x: '-200%',
     duration: 2,
     scrollTrigger: '.contacts',
     ease: "power4.out",
-    delay: 1.
+    delay: 0.7
 });
 gsap.from('.contacts__img-item', {
     y: 200,
@@ -227,7 +223,7 @@ gsap.from('.contacts__img-item', {
     duration: 2,
     scrollTrigger: '.contacts',
     ease: "power4.inOut",
-    delay: 1
+    delay: 0.7
 });
 gsap.to('.contacts__img-item', {
     keyframes: {
@@ -258,5 +254,6 @@ gsap.to('.contacts__img-item', {
         },
     },
     duration: 20,
+    deley: 2.5,
     repeat: -1,
 })
