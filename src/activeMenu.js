@@ -10,7 +10,7 @@ window.onscroll = () => {
         }
     })
     links.forEach((item) => {
-        item.classList.remove('active');
+        // item.classList.remove('active');
         if(item.href.includes(current)) {
             item.classList.add('active');
         } else {
